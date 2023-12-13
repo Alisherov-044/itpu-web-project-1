@@ -1,0 +1,26 @@
+@mixin flex(
+    $direction: row,
+    $align: flex-start,
+    $justify: flex-start,
+    $gap: 0px,
+    $wrap: nowrap
+) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+    gap: $gap;
+    flex-wrap: $wrap;
+}
+
+@mixin font($size, $height, $weight) {
+    font-size: $size;
+    line-height: $height;
+    font-weight: $weight;
+}
+
+@mixin media($size) {
+    @media screen and (max-width: #{$size}px) {
+        @content;
+    }
+}

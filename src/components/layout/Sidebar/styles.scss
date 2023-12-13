@@ -1,0 +1,18 @@
+@import "@/styles/abstract/mixins", "@/styles/abstract/variables";
+
+.sidebar {
+    width: 100%;
+    max-width: 400px;
+    background-color: $white;
+    height: 100vh;
+    padding: 60px 40px;
+
+    &__links {
+        @include flex(column, flex-start, flex-start, 20px);
+        margin-top: 40px;
+    }
+
+    &__link {
+        color: $black;
+    }
+}

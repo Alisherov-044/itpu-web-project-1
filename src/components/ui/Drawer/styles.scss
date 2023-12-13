@@ -1,0 +1,37 @@
+@import "@/styles/abstract/mixins", "@/styles/abstract/variables";
+
+.backdrop {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    transition: all 0.2s ease;
+    z-index: -1;
+
+    &.open {
+        background-color: rgba($color: $black, $alpha: 0.5);
+        z-index: 5;
+
+        .drawer {
+            transform: translateX(0);
+        }
+    }
+
+    .drawer {
+        position: fixed;
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
+        transition: all 0.2s ease;
+    }
+
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 10px;
+        color: $black;
+        cursor: pointer;
+    }
+}

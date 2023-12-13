@@ -1,0 +1,40 @@
+@import "@/styles/abstract/mixins", "@/styles/abstract/variables";
+
+.about__section {
+    position: relative;
+    margin-top: 180px;
+    padding-block: 80px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("/about.png");
+    background-position: center center;
+
+    &--backdrop {
+        position: absolute;
+        inset: 0;
+        background-color: rgba($color: $black, $alpha: 0.3);
+        z-index: 1;
+    }
+
+    .container {
+        @include flex(column, center, flex-start, 60px);
+        color: $white;
+
+        & > * {
+            z-index: 2;
+        }
+    }
+
+    &--title {
+        @include font(48px, 120%, 700);
+        font-family: var(--oswald);
+        text-align: center;
+    }
+
+    &--description {
+        @include font(24px, 120%, 400);
+        width: 100%;
+        max-width: 350px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,51 @@
+@import "@/styles/abstract/mixins", "@/styles/abstract/variables";
+
+.hero__section {
+    width: 100%;
+    margin-top: 200px;
+
+    .container {
+        @include flex(column, center);
+    }
+
+    .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url("/hero-bg.png");
+        aspect-ratio: 1.8 / 1;
+
+        @include media(1200) {
+            height: 100vh;
+        }
+    }
+
+    &--logo {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 14px;
+    }
+
+    &--title {
+        @include font(48px, 120%, 700);
+        font-family: var(--oswald);
+        width: 100%;
+        max-width: 360px;
+        color: $white;
+        text-align: center;
+        margin-bottom: 42px;
+    }
+
+    &--description {
+        @include font(24px, 120%, 400);
+        width: 100%;
+        max-width: 420px;
+        color: $text;
+        text-align: center;
+    }
+}

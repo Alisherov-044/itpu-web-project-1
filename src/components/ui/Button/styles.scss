@@ -1,0 +1,16 @@
+@import "@/styles/abstract/mixins", "@/styles/abstract/variables";
+
+.button {
+    position: relative;
+
+    &.primary {
+        @include font(14px, 120%, 400);
+        font-family: var(--oswald);
+        padding: 6px 18px;
+        border-radius: 18px;
+        text-transform: uppercase;
+        letter-spacing: 1.4px;
+        color: $white;
+        background-color: $blue;
+    }
+}

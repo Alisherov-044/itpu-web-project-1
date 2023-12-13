@@ -1,0 +1,56 @@
+@import "@/styles/abstract/mixins", "@/styles/abstract/variables";
+
+.headline__section {
+    position: relative;
+    margin-top: 300px;
+
+    .container {
+        @include flex(column, center);
+    }
+
+    &--title {
+        @include font(48px, 120%, 700);
+        font-family: var(--oswald);
+        width: 100%;
+        max-width: 650px;
+        color: $title;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    &--subtitle {
+        @include font(24px, 120%, 400);
+        width: 100%;
+        max-width: 420px;
+        color: $text;
+        text-align: center;
+        margin-bottom: 45px;
+
+        @include media(750) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &--descriptions {
+        @include flex(row, flex-start, space-between, 24px);
+        width: 100%;
+        margin-bottom: 45px;
+
+        @include media(750) {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+    }
+
+    &--description {
+        @include font(16px, 120%, 400);
+        width: 100%;
+        max-width: 410px;
+        color: $text;
+
+        @include media(750) {
+            max-width: 100%;
+        }
+    }
+}
